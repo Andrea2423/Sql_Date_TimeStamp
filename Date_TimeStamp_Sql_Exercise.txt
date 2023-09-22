@@ -1,0 +1,43 @@
+-concateno due colonne come un alias
+
+CONCAT(COLUMN1, COLUMN2) AS ALIAS_NAME
+
+
+-si usa per lowerCase o upperCase (nome_colonna, nome_colonna)
+
+LOWER(COLUMN)
+UPPER(COLUMN)
+
+
+-rimuove gli spazi bianchi o i caratteri indicati nella colonna indicata (nome_colonna)
+
+TRIM(COLUMN)
+
+
+-calcola la lunghezza delle stringhe
+
+LENGTH(COLUMN)
+
+
+-lo uso per estrarre una parte di stringa dato un indice di riferimento
+
+SUBSTRING(COLUMN, START, LENGTH)
+
+
+-lo uso per arrotondare i numeri
+
+ROUND(COLUMN, DECIMAL_PLACES)
+
+
+-li uso rispettivamente per aggiungere o sottrarre un intervallo di tempo ad un valore di tipo data
+
+DATE_ADD(COLUMN, INTERVAL EXPRESSION UNIT)
+DATE_SUB(COLUMN, INTERVAL EXPRESSION UNIT)
+
+
+-lo uso per formattare i dati di una colonna secondo le indicazioni della stringa di formattazione
+
+FORMAT(COLUMN, FORMAT_STRING)
+
+-lo uso per definire una certa data, come ricorrente ogni anno il giorno del mio compleanno fatto il 22/09 (il mio compleanno è 14/03)
+SELECT DATE_ADD(DATE_ADD(DATE_ADD(NOW(), INTERVAL 5 MONTH), INTERVAL 21 DAY), INTERVAL 1 YEAR) AS BIRTHDAY_DATE;
